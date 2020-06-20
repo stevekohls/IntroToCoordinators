@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" title="A" id="Kjj-Jv-VnK"/>
                     <connections>
                         <outlet property="nameTextField" destination="AIt-DG-8kg" id="AuY-Yx-uxL"/>
+                        <segue destination="6ka-qZ-ghb" kind="show" identifier="AtoB" id="ZWS-4r-ob5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,20 +69,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-2Z-Iu7">
-                                <rect key="frame" x="176" y="438" width="62" height="30"/>
+                                <rect key="frame" x="176" y="460" width="62" height="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
                                     <action selector="didTapContinueButton:" destination="6ka-qZ-ghb" eventType="touchUpInside" id="b8E-fV-39T"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1E-9a-Ay3">
-                                <rect key="frame" x="20" y="134" width="51" height="31"/>
+                                <rect key="frame" x="20" y="178" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="6ka-qZ-ghb" eventType="valueChanged" id="noK-hy-QdR"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flip the switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-rP-HmA">
-                                <rect key="frame" x="85" y="139" width="309" height="21"/>
+                                <rect key="frame" x="85" y="183" width="309" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,6 +103,7 @@
                     <navigationItem key="navigationItem" title="B" id="aee-3P-7cS"/>
                     <connections>
                         <outlet property="theSwitch" destination="g1E-9a-Ay3" id="f5Q-hP-y9J"/>
+                        <segue destination="XG4-BU-baN" kind="show" identifier="BtoC" id="mkQ-LV-od9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1B8-u1-Esa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,25 +119,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-fF-qX9">
-                                <rect key="frame" x="20" y="134" width="116" height="21"/>
+                                <rect key="frame" x="20" y="178" width="116" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-h2-5XW" userLabel="nameLabel">
-                                <rect key="frame" x="136" y="135" width="258" height="19.5"/>
+                                <rect key="frame" x="136" y="179" width="258" height="19.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="The switch is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-mC-ANo">
-                                <rect key="frame" x="20" y="175" width="100" height="21"/>
+                                <rect key="frame" x="20" y="219" width="100" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfo-9K-XPE" userLabel="flippedLabel">
-                                <rect key="frame" x="136" y="176" width="258" height="19.5"/>
+                                <rect key="frame" x="136" y="220" width="258" height="19.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

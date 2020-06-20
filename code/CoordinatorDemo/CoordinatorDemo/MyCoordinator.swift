@@ -36,8 +36,7 @@ extension MyCoordinator: AViewControllerDelegate {
 
         bViewController.delegate = self
 
-        let navigationController = fromViewController.navigationController
-        navigationController?.pushViewController(bViewController, animated: true)
+        fromViewController.performSegue(withIdentifier: "AtoB", sender: self)
     }
 }
 
@@ -50,7 +49,6 @@ extension MyCoordinator: BViewControllerDelegate {
         cViewController.name = name
         cViewController.flipped = flipped
 
-        let navigationController = fromViewController.navigationController
-        navigationController?.pushViewController(cViewController, animated: true)
+        fromViewController.performSegue(withIdentifier: "BtoC", sender: self)
     }
 }
