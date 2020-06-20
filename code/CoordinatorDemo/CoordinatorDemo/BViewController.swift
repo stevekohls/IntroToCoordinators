@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol BViewControllerDelegate: AnyObject {
+    func didSubmitSwitchValue(_ flipped: Bool, from fromViewController: UIViewController)
+}
+
 class BViewController: UIViewController {
     @IBOutlet weak var theSwitch: UISwitch!
 
-    var name: String?
+    weak var delegate: BViewControllerDelegate?
+
     var flipped: Bool = false
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,9 +33,6 @@ class BViewController: UIViewController {
     }
 
     @IBAction func didTapContinueButton(_ sender: Any) {
-        guard let cViewController = storyboard?.instantiateViewController(identifier: "CViewController") as? CViewController else { return }
-        cViewController.name = name
-        cViewController.flipped = flipped
-        navigationController?.pushViewController(cViewController, animated: true)
+        delegate?.didSubmitSwitchValue(flipped, from: self)
     }
 }

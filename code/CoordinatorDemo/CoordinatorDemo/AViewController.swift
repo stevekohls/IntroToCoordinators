@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol AViewControllerDelegate: AnyObject {
+    func didSubmitName(_ name: String?, from fromViewController: UIViewController)
+}
+
 class AViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
+
+    weak var delegate: AViewControllerDelegate?
 
     var name: String?
 
@@ -25,10 +31,7 @@ class AViewController: UIViewController {
     @IBAction func didTapContinueButton(_ sender: Any) {
         nameTextField.resignFirstResponder()
 
-        guard let bViewController = storyboard?.instantiateViewController(identifier: "BViewController") as? BViewController else { return }
-        bViewController.name = name
-
-        navigationController?.pushViewController(bViewController, animated: true)
+        delegate?.didSubmitName(name, from: self)
     }
 }
 
