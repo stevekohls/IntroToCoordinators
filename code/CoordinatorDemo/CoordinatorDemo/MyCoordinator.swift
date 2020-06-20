@@ -23,6 +23,7 @@ class MyCoordinator: Coordinator {
         }
 
         aViewController.delegate = self
+        aViewController.coordinatedDelegate = self
 
         return aViewController
     }()
@@ -41,5 +42,22 @@ extension MyCoordinator: BViewControllerDelegate {
         self.flipped = flipped
 
         fromViewController.performSegue(withIdentifier: "BtoC", sender: self)
+    }
+}
+
+extension MyCoordinator: CoordinatedViewControllerDelegate {
+    func handlePrepareForSegue(_ segue: UIStoryboardSegue, from fromViewController: UIViewController) {
+        if segue.identifier == "AtoB",
+            let bViewController = segue.destination as? BViewController {
+
+            bViewController.delegate = self
+            bViewController.coordinatedDelegate = self
+        }
+        else if segue.identifier == "BtoC",
+            let cViewController = segue.destination as? CViewController {
+
+            cViewController.name = name
+            cViewController.flipped = flipped
+        }
     }
 }
