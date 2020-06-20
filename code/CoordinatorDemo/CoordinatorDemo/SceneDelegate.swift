@@ -21,15 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = coordinator.initialViewController
 
-        guard let aViewController = storyboard.instantiateViewController(identifier: "AViewController") as? AViewController else {
-            fatalError("Could not instantiate AViewController from storyboard")
-        }
-
-        aViewController.delegate = coordinator
-
-        let navigationController = UINavigationController(rootViewController: aViewController)
+        let navigationController = UINavigationController(rootViewController: viewController)
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

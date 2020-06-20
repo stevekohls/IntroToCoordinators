@@ -11,6 +11,17 @@ import UIKit
 class MyCoordinator: Coordinator {
     var name: String?
     var flipped: Bool = false
+
+    lazy var initialViewController: UIViewController = {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let aViewController = storyboard.instantiateViewController(identifier: "AViewController") as? AViewController else {
+            fatalError("Could not instantiate AViewController from storyboard")
+        }
+
+        aViewController.delegate = self
+
+        return aViewController
+    }()
 }
 
 extension MyCoordinator: AViewControllerDelegate {
