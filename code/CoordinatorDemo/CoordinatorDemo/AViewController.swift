@@ -17,7 +17,11 @@ class AViewController: CoordinatedViewController {
 
     weak var delegate: AViewControllerDelegate?
 
-    var name: String?
+    private(set) var name: String?
+
+    func configure(name: String?) {
+        self.name = name
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

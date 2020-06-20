@@ -56,8 +56,7 @@ extension MyCoordinator: CoordinatedViewControllerDelegate {
         else if segue.identifier == "BtoC",
             let cViewController = segue.destination as? CViewController {
 
-            cViewController.name = name
-            cViewController.flipped = flipped
+            cViewController.configure(name: name, flipped: flipped)
         }
     }
 }

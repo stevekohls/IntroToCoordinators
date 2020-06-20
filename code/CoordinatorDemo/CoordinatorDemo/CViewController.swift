@@ -12,8 +12,13 @@ class CViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flippedLabel: UILabel!
 
-    var name: String?
-    var flipped: Bool = false
+    private(set) var name: String?
+    private(set) var flipped: Bool = false
+
+    func configure(name: String?, flipped: Bool) {
+        self.name = name
+        self.flipped = flipped
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

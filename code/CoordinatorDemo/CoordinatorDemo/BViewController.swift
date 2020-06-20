@@ -17,7 +17,11 @@ class BViewController: CoordinatedViewController {
 
     weak var delegate: BViewControllerDelegate?
 
-    var flipped: Bool = false
+    private(set) var flipped: Bool = false
+
+    func configure(flipped: Bool) {
+        self.flipped = flipped
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
