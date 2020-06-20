@@ -13,9 +13,11 @@
 		AA1E253A246256BD00F7B961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1E2539246256BD00F7B961 /* Assets.xcassets */; };
 		AA1E253D246256BD00F7B961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1E253B246256BD00F7B961 /* LaunchScreen.storyboard */; };
 		AA1E2548246256BD00F7B961 /* CoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E2547246256BD00F7B961 /* CoordinatorDemoTests.swift */; };
+		AA1E2553246256D200F7B961 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E2552246256D200F7B961 /* Coordinator.swift */; };
 		AA1E25552462575D00F7B961 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E25542462575D00F7B961 /* AViewController.swift */; };
 		AA1E25572462578500F7B961 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E25562462578500F7B961 /* BViewController.swift */; };
 		AA1E25592462579A00F7B961 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E25582462579A00F7B961 /* CViewController.swift */; };
+		AA1E255B2463A5AA00F7B961 /* MyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E255A2463A5AA00F7B961 /* MyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,11 @@
 		AA1E2543246256BD00F7B961 /* CoordinatorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1E2547246256BD00F7B961 /* CoordinatorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDemoTests.swift; sourceTree = "<group>"; };
 		AA1E2549246256BD00F7B961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1E2552246256D200F7B961 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AA1E25542462575D00F7B961 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		AA1E25562462578500F7B961 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
 		AA1E25582462579A00F7B961 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		AA1E255A2463A5AA00F7B961 /* MyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				AA1E25542462575D00F7B961 /* AViewController.swift */,
 				AA1E25562462578500F7B961 /* BViewController.swift */,
 				AA1E25582462579A00F7B961 /* CViewController.swift */,
+				AA1E2552246256D200F7B961 /* Coordinator.swift */,
+				AA1E255A2463A5AA00F7B961 /* MyCoordinator.swift */,
 				AA1E2536246256BA00F7B961 /* Main.storyboard */,
 				AA1E2539246256BD00F7B961 /* Assets.xcassets */,
 				AA1E253B246256BD00F7B961 /* LaunchScreen.storyboard */,
@@ -206,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1E255B2463A5AA00F7B961 /* MyCoordinator.swift in Sources */,
+				AA1E2553246256D200F7B961 /* Coordinator.swift in Sources */,
 				AA1E25572462578500F7B961 /* BViewController.swift in Sources */,
 				AA1E25592462579A00F7B961 /* CViewController.swift in Sources */,
 				AA1E2531246256BA00F7B961 /* AppDelegate.swift in Sources */,
