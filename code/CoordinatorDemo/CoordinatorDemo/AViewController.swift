@@ -12,7 +12,7 @@ protocol AViewControllerDelegate: AnyObject {
     func didSubmitName(_ name: String?, from fromViewController: UIViewController)
 }
 
-class AViewController: UIViewController {
+class AViewController: CoordinatedViewController {
     @IBOutlet weak var nameTextField: UITextField!
 
     weak var delegate: AViewControllerDelegate?

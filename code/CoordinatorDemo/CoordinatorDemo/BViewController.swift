@@ -12,7 +12,7 @@ protocol BViewControllerDelegate: AnyObject {
     func didSubmitSwitchValue(_ flipped: Bool, from fromViewController: UIViewController)
 }
 
-class BViewController: UIViewController {
+class BViewController: CoordinatedViewController {
     @IBOutlet weak var theSwitch: UISwitch!
 
     weak var delegate: BViewControllerDelegate?
