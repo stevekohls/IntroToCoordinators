@@ -12,8 +12,12 @@ class MyCoordinator: Coordinator {
     var name: String?
     var flipped: Bool = false
 
-    lazy var initialViewController: UIViewController = {
+    private lazy var storyboard: UIStoryboard = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard
+    }()
+
+    lazy var initialViewController: UIViewController = {
         guard let aViewController = storyboard.instantiateViewController(identifier: "AViewController") as? AViewController else {
             fatalError("Could not instantiate AViewController from storyboard")
         }
@@ -28,7 +32,6 @@ extension MyCoordinator: AViewControllerDelegate {
     func didSubmitName(_ name: String?, from fromViewController: UIViewController) {
         self.name = name
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let bViewController = storyboard.instantiateViewController(identifier: "BViewController") as? BViewController else { return }
 
         bViewController.delegate = self
@@ -42,7 +45,6 @@ extension MyCoordinator: BViewControllerDelegate {
     func didSubmitSwitchValue(_ flipped: Bool, from fromViewController: UIViewController) {
         self.flipped = flipped
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let cViewController = storyboard.instantiateViewController(identifier: "CViewController") as? CViewController else { return }
 
         cViewController.name = name
