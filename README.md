@@ -1,4 +1,4 @@
-# IntroToCoordinators
+# An Introduction to Coordinators
 An introduction to the Coordinator pattern in iOS
 
 ## Background
