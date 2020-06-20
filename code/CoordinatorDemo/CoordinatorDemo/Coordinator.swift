@@ -8,4 +8,6 @@
 
 import UIKit
 
-class Coordinator {}
+protocol Coordinator {
+    var initialViewController: UIViewController { get }
+}
