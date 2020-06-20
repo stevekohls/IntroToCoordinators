@@ -32,10 +32,6 @@ extension MyCoordinator: AViewControllerDelegate {
     func didSubmitName(_ name: String?, from fromViewController: UIViewController) {
         self.name = name
 
-        guard let bViewController = storyboard.instantiateViewController(identifier: "BViewController") as? BViewController else { return }
-
-        bViewController.delegate = self
-
         fromViewController.performSegue(withIdentifier: "AtoB", sender: self)
     }
 }
@@ -43,11 +39,6 @@ extension MyCoordinator: AViewControllerDelegate {
 extension MyCoordinator: BViewControllerDelegate {
     func didSubmitSwitchValue(_ flipped: Bool, from fromViewController: UIViewController) {
         self.flipped = flipped
-
-        guard let cViewController = storyboard.instantiateViewController(identifier: "CViewController") as? CViewController else { return }
-
-        cViewController.name = name
-        cViewController.flipped = flipped
 
         fromViewController.performSegue(withIdentifier: "BtoC", sender: self)
     }
